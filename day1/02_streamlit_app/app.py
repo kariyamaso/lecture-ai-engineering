@@ -8,7 +8,6 @@ import data                 # データモジュール
 import torch
 from transformers import pipeline
 from config import MODEL_NAME
-from huggingface_hub import HfFolder
 
 # --- アプリケーション設定 ---
 st.set_page_config(page_title="Gemma Chatbot", layout="wide")
@@ -79,3 +78,53 @@ elif st.session_state.page == "サンプルデータ管理":
 # --- フッターなど（任意） ---
 st.sidebar.markdown("---")
 st.sidebar.info("開発者: [Your Name]")
+
+# ===========================================
+# カスタマイズ (CSS)
+# ===========================================
+st.markdown("""
+<style>
+body {
+    color: #E0E0E0; 
+    background-color: #1E1E1E; 
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace; 
+}
+
+/* Basic Input elements */
+input, textarea, select {
+    background-color: #2A2A2A !important; 
+    color: #E0E0E0 !important;           
+    border: 1px solid #555 !important;    
+}
+textarea {
+     font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important; 
+}
+
+/* Buttons */
+button {
+    background-color: #3C3C3C !important; 
+    color: #E0E0E0 !important;           
+    border: 1px solid #555 !important;
+    transition: background-color 0.2s ease; 
+}
+button:hover {
+    background-color: #555555 !important; 
+}
+
+/* Code blocks */
+pre, code {
+    background-color: #282C34 !important; 
+    color: #ABB2BF !important;           
+    border-radius: 4px;
+    padding: 0.5em !important;
+    white-space: pre-wrap !important; 
+    word-break: break-all !important; 
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #00AACC; 
+}
+
+</style>
+""", unsafe_allow_html=True)
