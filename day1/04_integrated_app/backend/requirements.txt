@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+transformers>=4.38.0 # Specify a version range if needed
+# torch>=2.0.0
+# torchvision # Required by transformers/torch
+# torch==2.7.0
+torch==2.3.0
+torchvision==0.18.0
+python-dotenv
+accelerate # Often needed for efficient model loading
+sentencepiece # Might be needed by the tokenizer
+protobuf # Might be needed by the tokenizer
+onnxscript # Required by transformers
